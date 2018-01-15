@@ -1,0 +1,44 @@
+{
+    "name": "goodmotiongoodmotion/goodmotion",
+    "description": "super plugin",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "goodmotion"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "patrick",
+            "homepage": "goodmotion.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "goodmotiongoodmotion\\goodmotion\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Goodmotion",
+        "handle": "goodmotion",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": true,
+        "changelogUrl": "???",
+        "components": {
+            "goodmotion": "goodmotiongoodmotion\\goodmotion\\services\\Goodmotion"
+        },
+        "class": "goodmotiongoodmotion\\goodmotion\\Goodmotion"
+    }
+}

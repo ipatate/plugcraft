@@ -1,0 +1,40 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Goodmotion plugin for Craft CMS 3.x
+ *
+ * Goodmotion index.twig
+ *
+ * @author    patrick
+ * @copyright Copyright (c) 2018 patrick
+ * @link      goodmotion.net
+ * @package   Goodmotion
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("goodmotiongoodmotion\\goodmotion\\assetbundles\\goodmotion\\GoodmotionAsset") %}
+{% do view.registerAssetBundle("goodmotiongoodmotion\\goodmotion\\assetbundles\\goodmotioncpsection\\GoodmotionCPSectionAsset") %}
+
+{% set docsUrl = "???" %}
+
+{% set title = "Goodmotion" %}
+
+{% set pluginCpUrl = url('goodmotion') %}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@goodmotiongoodmotion/goodmotion/assetbundles/goodmotioncpsection/dist', true) ~ '/img/Goodmotion-icon.svg' %}
+
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('goodmotion') }}</a>
+    </div>
+{% endset %}
+
+{% set content %}
+    <h2>{{ "Goodmotion CP Section body goes here"|t('goodmotion') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}
